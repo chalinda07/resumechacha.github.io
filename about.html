@@ -1,4 +1,148 @@
 <html>
+    <head>
+        <style type="text/css">
+            body,
+        html {
+          margin: 0;
+          height: 100%;
+          width: 100%;
+          font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+        
+        .bg {
+          background-image: url("/images/cover.jpg");
+          height: 100%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .icon img {
+          border-radius: 150px;
+          height: 65px;
+          margin-top: 10px;
+          margin-left: 10px;
+        }
+        .bg .nav {
+          overflow: hidden;
+          text-align: right;
+          padding: 22px;
+        }
+        .bg .nav a {
+          color: #2d2d2b;
+          text-align: center;
+          padding: 15px 15px 15px 15px;
+          text-decoration: none;
+          font-size: 20px;
+        }
+        .bg .nav a:hover {
+          background-color: #eae6df;
+          color: #2d2d2b;
+          border-radius: 25px;
+        }
+        .bg .nav a.active {
+          background-color: #d4c8be;
+          color: white;
+          border-radius: 25px;
+        }
+        
+        /*Start About*/
+        .profile {
+          margin-top: 20px;
+          align-items: center;
+          background-color: rgb(255, 250, 250);
+          background-color: rgb(255, 250, 250, 0.4);
+          padding-top: 10px;
+        }
+        .profile h1 {
+          color: whitesmoke;
+          text-align: center;
+          text-decoration: underline;
+          display: block;
+          padding-top: 5px;
+        }
+        
+        .imgpro {
+          display: flex;
+        }
+        .imgpro img {
+          width: 350;
+          height: 270;
+          margin-bottom: 50px;
+          border-radius: 20px;
+        }
+        .textpro p {
+          display: flex;
+          padding-left: 50px;
+        }
+        .skillbar {
+          background-color: rgb(0, 0, 0); /* Fallback color */
+          background-color: rgba(0, 0, 0, 0.1); /* Black w/opacity/see-through */
+          display: block;
+          padding-left: 25px;
+        }
+        @keyframes load {
+          from {
+            width: 0%;
+          }
+        }
+        @-webkit-keyframes load {
+          from {
+            width: 0%;
+          }
+        }
+        @-moz-keyframes load {
+          from {
+            width: 0%;
+          }
+        }
+        @-o-keyframes load {
+          from {
+            width: 0%;
+          }
+        }
+        
+        .bar {
+          background-color: #eee;
+          padding: 2px;
+          border-radius: 15px;
+          margin-bottom: 5px;
+          font-size: 14px;
+          color: #fff;
+          font-weight: bold;
+          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        }
+        .bar::before {
+          content: attr(data-skill);
+          background-color: orange;
+          display: inline-block;
+          padding: 5px 0 5px 10px;
+          border-radius: inherit;
+          animation: load 2s 0s;
+          -webkit-animation: load 2s 0s;
+          -moz-animation: load 2s 0s;
+          -o-animation: load 2s 0s;
+        }
+        
+        .bar.front::before {
+          background-color: #2c4f71;
+        }
+        .bar.back::before {
+          background-color: #6d1919;
+        }
+        
+        .bar.learning::before {
+          width: calc(25% - 10px);
+        }
+        .bar.basic::before {
+          width: calc(20% - 10px);
+        }
+        
+        .bar.advanced::before {
+          width: calc(22% - 10px);
+        }
+        /*End About*/
+        </style>
+    </head>
     <body>
         <header>
             <div class="bg">
@@ -12,8 +156,6 @@
         <a href="/career.html">Career Objective</a>
         <a href="/gallory.html">Gallory</a>       
             </div>
-
-
              <div class="profile">
         <h1>About me</h1>
         <div class="imgpro">
@@ -40,585 +182,4 @@
         </div>
     </header>
     </body>
-<style>
-    body,
-html {
-  margin: 0;
-  height: 100%;
-  width: 100%;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-}
-
-.bg {
-  background-image: url("/images/cover.jpg");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.icon img {
-  border-radius: 150px;
-  height: 65px;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-.bg .nav {
-  overflow: hidden;
-  text-align: right;
-  padding: 22px;
-}
-.bg .nav a {
-  color: #2d2d2b;
-  text-align: center;
-  padding: 15px 15px 15px 15px;
-  text-decoration: none;
-  font-size: 20px;
-}
-.bg .nav a:hover {
-  background-color: #eae6df;
-  color: #2d2d2b;
-  border-radius: 25px;
-}
-.bg .nav a.active {
-  background-color: #d4c8be;
-  color: white;
-  border-radius: 25px;
-}
-.content h2 {
-  background-color: rgb(255, 250, 250); /* Fallback color */
-  background-color: rgb(255, 250, 250, 0.2); /* white w/opacity/see-through */
-  border: 0.5px solid transparent;
-  border-radius: 20px;
-  overflow: hidden;
-}
-/* HOW TO MAKE A GLITCH */
-
-.content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 128px;
-  padding-right: 80px;
-}
-.content .text {
-  position: relative;
-  color: whitesmoke;
-  font-weight: 700;
-  font-size: 60px;
-  transform: scale(2);
-  padding: 65px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-.content .text:before,
-.content .text:after {
-  padding: 65px;
-  color: #91b3bc;
-  content: attr(data-text);
-  position: absolute;
-  width: 100%;
-  overflow: hidden;
-  top: 0;
-}
-.content .text:before {
-  left: 3px;
-  text-shadow: -2px 0 #023246;
-  animation: glitch-1 2s linear infinite reverse;
-}
-.content .text:after {
-  left: -3px;
-  text-shadow: -2px 0 #6d1919;
-  animation: glitch-2 2s linear infinite reverse;
-}
-@keyframes glitch-1 {
-  0% {
-    clip: rect(132px, auto, 101px, 30px);
-  }
-  5% {
-    clip: rect(17px, auto, 94px, 30px);
-  }
-  10% {
-    clip: rect(40px, auto, 66px, 30px);
-  }
-  15% {
-    clip: rect(87px, auto, 82px, 30px);
-  }
-  20% {
-    clip: rect(137px, auto, 61px, 30px);
-  }
-  25% {
-    clip: rect(34px, auto, 14px, 30px);
-  }
-  30% {
-    clip: rect(133px, auto, 74px, 30px);
-  }
-  35% {
-    clip: rect(76px, auto, 107px, 30px);
-  }
-  40% {
-    clip: rect(59px, auto, 130px, 30px);
-  }
-  45% {
-    clip: rect(29px, auto, 84px, 30px);
-  }
-  50% {
-    clip: rect(22px, auto, 67px, 30px);
-  }
-  55% {
-    clip: rect(67px, auto, 62px, 30px);
-  }
-  60% {
-    clip: rect(10px, auto, 105px, 30px);
-  }
-}
-@keyframes glitch-2 {
-  0% {
-    clip: rect(129px, auto, 36px, 30px);
-  }
-  5% {
-    clip: rect(36px, auto, 4px, 30px);
-  }
-  10% {
-    clip: rect(85px, auto, 66px, 30px);
-  }
-  15% {
-    clip: rect(91px, auto, 91px, 30px);
-  }
-  20% {
-    clip: rect(148px, auto, 138px, 30px);
-  }
-  25% {
-    clip: rect(38px, auto, 122px, 30px);
-  }
-  30% {
-    clip: rect(69px, auto, 54px, 30px);
-  }
-  35% {
-    clip: rect(98px, auto, 71px, 30px);
-  }
-  40% {
-    clip: rect(146px, auto, 34px, 30px);
-  }
-  45% {
-    clip: rect(134px, auto, 43px, 30px);
-  }
-  50% {
-    clip: rect(102px, auto, 80px, 30px);
-  }
-  55% {
-    clip: rect(119px, auto, 44px, 30px);
-  }
-  60% {
-    clip: rect(106px, auto, 99px, 30px);
-  }
-  65% {
-    clip: rect(141px, auto, 74px, 30px);
-  }
-  70% {
-    clip: rect(20px, auto, 78px, 30px);
-  }
-  75% {
-    clip: rect(133px, auto, 79px, 30px);
-  }
-  80% {
-    clip: rect(78px, auto, 52px, 30px);
-  }
-  85% {
-    clip: rect(35px, auto, 39px, 30px);
-  }
-  90% {
-    clip: rect(67px, auto, 70px, 30px);
-  }
-  95% {
-    clip: rect(71px, auto, 103px, 30px);
-  }
-  100% {
-    clip: rect(83px, auto, 40px, 30px);
-  }
-}
-/*End Glitch*/
-/*Button*/
-.button {
-  border-radius: 10px;
-  font-size: 25px;
-  color: #023246;
-  text-align: center;
-  padding: 12px;
-  transition: all 0.7s;
-  margin-top: 120px;
-}
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-  color: #023246;
-}
-
-.button span:after {
-  content: "\00bb";
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-.button:hover span {
-  padding-right: 25px;
-}
-.button:hover span:after {
-  opacity: 5;
-  right: 0;
-}
-/*End button*/
-body,
-html {
-  margin: 0;
-  height: 100%;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-}
-/*Start About*/
-.profile {
-  margin-top: 20px;
-  align-items: center;
-  background-color: rgb(255, 250, 250);
-  background-color: rgb(255, 250, 250, 0.4);
-  padding-top: 10px;
-}
-.profile h1 {
-  color: whitesmoke;
-  text-align: center;
-  text-decoration: underline;
-  display: block;
-  padding-top: 5px;
-}
-
-.imgpro {
-  display: flex;
-}
-.imgpro img {
-  width: 350;
-  height: 270;
-  margin-bottom: 50px;
-  border-radius: 20px;
-}
-.textpro p {
-  display: flex;
-  padding-left: 50px;
-}
-.skillbar {
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.1); /* Black w/opacity/see-through */
-  display: block;
-  padding-left: 25px;
-}
-@keyframes load {
-  from {
-    width: 0%;
-  }
-}
-@-webkit-keyframes load {
-  from {
-    width: 0%;
-  }
-}
-@-moz-keyframes load {
-  from {
-    width: 0%;
-  }
-}
-@-o-keyframes load {
-  from {
-    width: 0%;
-  }
-}
-
-.bar {
-  background-color: #eee;
-  padding: 2px;
-  border-radius: 15px;
-  margin-bottom: 5px;
-  font-size: 14px;
-  color: #fff;
-  font-weight: bold;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-}
-.bar::before {
-  content: attr(data-skill);
-  background-color: orange;
-  display: inline-block;
-  padding: 5px 0 5px 10px;
-  border-radius: inherit;
-  animation: load 2s 0s;
-  -webkit-animation: load 2s 0s;
-  -moz-animation: load 2s 0s;
-  -o-animation: load 2s 0s;
-}
-
-.bar.front::before {
-  background-color: #2c4f71;
-}
-.bar.back::before {
-  background-color: #6d1919;
-}
-
-.bar.learning::before {
-  width: calc(25% - 10px);
-}
-.bar.basic::before {
-  width: calc(20% - 10px);
-}
-
-.bar.advanced::before {
-  width: calc(22% - 10px);
-}
-/*End About*/
-/*Start Edu*/
-* {
-  box-sizing: border-box;
-}
-.box-edu {
-  margin-top: 15px;
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-bottom: 5px;
-  padding: 22px;
-  border: 4px solid transparent;
-  background-color: rgb(255, 250, 250); /* Fallback color */
-  background-color: rgb(255, 250, 250, 0.4); /* white w/opacity/see-through */
-  border-radius: 100px;
-  padding-left: 50;
-}
-
-.photoe img {
-  display: inline;
-  border: 2px solid #2c4f71;
-  margin-left: 5px;
-}
-/* Container around content */
-.container {
-  position: relative;
-  width: 50%;
-}
-.right {
-  left: 50%;
-}
-
-/* The actual content */
-.contentedu {
-  padding: 10px 15px;
-  background-color: whitesmoke;
-  border-radius: 25px;
-}
-.contentedu p {
-  font-size: 15px;
-  line-height: 4px;
-}
-/*END EDU */
-/* Start Gallory */
-
-.containergall {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: 100px 300px;
-  grid-gap: 10px;
-  grid-auto-flow: dense;
-}
-
-.gallery-item {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.gallery-item .image {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.gallery-item .image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 50%;
-  cursor: pointer;
-  transition: 0.5s ease-in-out;
-}
-
-.gallery-item:hover .image img {
-  transform: scale(1.5);
-}
-
-.gallery-item .text {
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 25px;
-  pointer-events: none;
-  z-index: 4;
-  transition: 0.3s ease-in-out;
-  -webkit-backdrop-filter: blur(5px) saturate(1.8);
-  backdrop-filter: blur(5px) saturate(1.8);
-}
-
-.gallery-item:hover .text {
-  opacity: 1;
-  animation: move-down 0.3s linear;
-  padding: 1em;
-  width: 100%;
-}
-
-.w-1 {
-  grid-column: span 1;
-}
-
-.w-2 {
-  grid-column: span 2;
-}
-
-.w-3 {
-  grid-column: span 3;
-}
-
-.w-4 {
-  grid-column: span 4;
-}
-
-.w-5 {
-  grid-column: span 5;
-}
-
-.w-6 {
-  grid-column: span 6;
-}
-
-.h-1 {
-  grid-row: span 1;
-}
-
-.h-2 {
-  grid-row: span 2;
-}
-
-.h-3 {
-  grid-row: span 3;
-}
-
-.h-4 {
-  grid-row: span 4;
-}
-
-.h-5 {
-  grid-row: span 5;
-}
-
-.h-6 {
-  grid-row: span 6;
-}
-
-@media screen and (max-width: 500px) {
-  .containergall {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .w-1,
-  .w-2,
-  .w-3,
-  .w-4,
-  .w-5,
-  .w-6 {
-    grid-column: span 1;
-  }
-
-  .h-1,
-  .h-2,
-  .h-3,
-  .h-4,
-  .h-5,
-  .h-6 {
-    grid-row: span 3;
-  }
-}
-
-@keyframes move-down {
-  0% {
-    top: 10%;
-  }
-  50% {
-    top: 35%;
-  }
-  100% {
-    top: 50%;
-  }
-}
-/* End Gallory*/
-/*Start Career*/
-.career {
-  position: relative;
-  margin: 0 auto;
-  font-family: Arial;
-}
-.career img {
-  border-top-right-radius: 50px;
-  border-top-left-radius: 50px;
-}
-.career h1 {
-  padding-top: 10px;
-  color: whitesmoke;
-  text-align: center;
-  font-weight: bolder;
-}
-.career .contentcareer {
-  position: absolute;
-  bottom: 0;
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-  color: #f1f1f1;
-  width: 100%;
-  padding: 20px;
-}
-.contentcareer p {
-  font-size: 20px;
-}
-/*End Career*/
-/*Start Activity*/
-.portt {
-  display: flex;
-  margin-top: 10px;
-  background-color: rgb(255, 250, 250);
-  background-color: rgb(255, 250, 250, 0.2);
-  margin-left: 20%;
-  margin-right: 20%;
-}
-.port {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 450px;
-  text-align: center;
-  font-family: arial;
-  padding-left: 30px;
-}
-
-.name {
-  color: whitesmoke;
-  font-size: 22px;
-}
-
-.port button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-/*End Activity*/
-
-</style>
 </html>
