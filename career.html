@@ -1,8 +1,80 @@
 <html>
     <head>
-        <link typr="text/css" rel="stylesheet" href="/home.css">
-        <link typr="text/css" rel="stylesheet" href="/style.css">
-
+        <style type="text/css">
+            body,
+        html {
+          margin: 0;
+          height: 100%;
+          width: 100%;
+          font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+        
+        .bg {
+          background-image: url("/images/cover.jpg");
+          height: 100%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .icon img {
+          border-radius: 150px;
+          height: 65px;
+          margin-top: 10px;
+          margin-left: 10px;
+        }
+        .bg .nav {
+          overflow: hidden;
+          text-align: right;
+          padding: 22px;
+        }
+        .bg .nav a {
+          color: #2d2d2b;
+          text-align: center;
+          padding: 15px 15px 15px 15px;
+          text-decoration: none;
+          font-size: 20px;
+        }
+        .bg .nav a:hover {
+          background-color: #eae6df;
+          color: #2d2d2b;
+          border-radius: 25px;
+        }
+        .bg .nav a.active {
+          background-color: #d4c8be;
+          color: white;
+          border-radius: 25px;
+        }
+        
+         /*Start Career*/
+.career {
+  position: relative;
+  margin: 0 auto;
+  font-family: Arial;
+}
+.career img {
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+.career h1 {
+  padding-top: 10px;
+  color: whitesmoke;
+  text-align: center;
+  font-weight: bolder;
+}
+.career .contentcareer {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+.contentcareer p {
+  font-size: 20px;
+}
+/*End Career*/
+        </style>
     </head>
     <body>
         <header>

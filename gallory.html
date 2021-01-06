@@ -1,7 +1,192 @@
 <html>
     <head>
-        <link typr="text/css" rel="stylesheet" href="/home.css">
-        <link typr="text/css" rel="stylesheet" href="/style.css">
+      <style type="text/css">
+        body,
+    html {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+    
+    .bg {
+      background-image: url("/images/cover.jpg");
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .icon img {
+      border-radius: 150px;
+      height: 65px;
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+    .bg .nav {
+      overflow: hidden;
+      text-align: right;
+      padding: 22px;
+    }
+    .bg .nav a {
+      color: #2d2d2b;
+      text-align: center;
+      padding: 15px 15px 15px 15px;
+      text-decoration: none;
+      font-size: 20px;
+    }
+    .bg .nav a:hover {
+      background-color: #eae6df;
+      color: #2d2d2b;
+      border-radius: 25px;
+    }
+    .bg .nav a.active {
+      background-color: #d4c8be;
+      color: white;
+      border-radius: 25px;
+    }
+    
+    
+/* Start Gallory */
+
+.containergall {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 100px 300px;
+  grid-gap: 10px;
+  grid-auto-flow: dense;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.gallery-item .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gallery-item .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.gallery-item:hover .image img {
+  transform: scale(1.5);
+}
+
+.gallery-item .text {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 25px;
+  pointer-events: none;
+  z-index: 4;
+  transition: 0.3s ease-in-out;
+  -webkit-backdrop-filter: blur(5px) saturate(1.8);
+  backdrop-filter: blur(5px) saturate(1.8);
+}
+
+.gallery-item:hover .text {
+  opacity: 1;
+  animation: move-down 0.3s linear;
+  padding: 1em;
+  width: 100%;
+}
+
+.w-1 {
+  grid-column: span 1;
+}
+
+.w-2 {
+  grid-column: span 2;
+}
+
+.w-3 {
+  grid-column: span 3;
+}
+
+.w-4 {
+  grid-column: span 4;
+}
+
+.w-5 {
+  grid-column: span 5;
+}
+
+.w-6 {
+  grid-column: span 6;
+}
+
+.h-1 {
+  grid-row: span 1;
+}
+
+.h-2 {
+  grid-row: span 2;
+}
+
+.h-3 {
+  grid-row: span 3;
+}
+
+.h-4 {
+  grid-row: span 4;
+}
+
+.h-5 {
+  grid-row: span 5;
+}
+
+.h-6 {
+  grid-row: span 6;
+}
+
+@media screen and (max-width: 500px) {
+  .containergall {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .w-1,
+  .w-2,
+  .w-3,
+  .w-4,
+  .w-5,
+  .w-6 {
+    grid-column: span 1;
+  }
+
+  .h-1,
+  .h-2,
+  .h-3,
+  .h-4,
+  .h-5,
+  .h-6 {
+    grid-row: span 3;
+  }
+}
+
+@keyframes move-down {
+  0% {
+    top: 10%;
+  }
+  50% {
+    top: 35%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+/* End Gallory*/
+</style>
     </head>
     <body>
         <header>
